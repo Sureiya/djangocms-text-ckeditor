@@ -10,13 +10,14 @@ import re
 import base64
 from PIL import Image
 from .settings import (TEXT_SAVE_IMAGE_FUNCTION, TEXT_ADDITIONAL_TAGS,
-                       TEXT_ADDITIONAL_ATTRIBUTES)
+                       TEXT_ADDITIONAL_ATTRIBUTES, TEXT_ADDITIONAL_STYLES)
 from djangocms_text_ckeditor.utils import plugin_to_tag
 
 
 def _get_default_parser():
     sanitizer.HTMLSanitizer.acceptable_elements.extend(TEXT_ADDITIONAL_TAGS)
     sanitizer.HTMLSanitizer.acceptable_attributes.extend(TEXT_ADDITIONAL_ATTRIBUTES)
+    sanitizer.HTMLSanitizer.acceptable_css_properties.extend(TEXT_ADDITIONAL_STYLES)
     sanitizer.HTMLSanitizer.allowed_elements = (
         sanitizer.HTMLSanitizer.acceptable_elements +
         sanitizer.HTMLSanitizer.mathml_elements +

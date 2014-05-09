@@ -21,3 +21,4 @@ else:
 TEXT_SAVE_IMAGE_FUNCTION = getattr(settings, 'TEXT_SAVE_IMAGE_FUNCTION', save_function_default)
 TEXT_ADDITIONAL_TAGS = getattr(settings, 'TEXT_ADDITIONAL_TAGS', ())
 TEXT_ADDITIONAL_ATTRIBUTES = getattr(settings, 'TEXT_ADDITIONAL_ATTRIBUTES', ())
+TEXT_ADDITIONAL_STYLES = getattr(settings, 'TEXT_ADDITIONAL_STYLES', ())
